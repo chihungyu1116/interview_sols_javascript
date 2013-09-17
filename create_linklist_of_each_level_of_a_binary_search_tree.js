@@ -1,8 +1,4 @@
 // gonna use array to replace linklist here
-
-
-
-
 function findLevelLinkList(root){
 	var level = [], stack1 = [], stack2 = [], node, left, right;
 
