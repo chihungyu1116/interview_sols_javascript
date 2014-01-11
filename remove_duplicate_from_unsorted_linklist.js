@@ -9,16 +9,11 @@ function Node(){
 	this.next = null;
 }
 
-
-
-
 // prev = null
 // nodes 1 1 2 3 2 4 5 6
 // point at 1, index = 0, prev = 1
 // point at 1, index = 1,
 // point at 2, index = 2, prev = 2
-
-
 
 function removeDuplicateFromLinkList(node){
 	var table = {},

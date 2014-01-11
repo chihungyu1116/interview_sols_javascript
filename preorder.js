@@ -9,7 +9,6 @@ function preorder(root){
 function preorder_no_recursion(root){
 	var stack = [], node, left, right;
 
-
 	stack.push(root);
 
 	while(stack.length){

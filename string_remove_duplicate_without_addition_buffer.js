@@ -16,3 +16,17 @@ function removeDuplicate(str){
 	}
 	return arr.join('');
 }
+
+
+
+// start from head
+function removeDuplicate(str){
+	var arr = str.split(''), index_sorted, index;
+	for(index_sorted = 0; index_sorted < arr.length; index_sorted++){
+		for(index=0; index<index_sorted; index++){
+			if(arr[index_sorted] === arr[index]){
+				arr.splice(index,1);
+			}
+		}
+	}
+}

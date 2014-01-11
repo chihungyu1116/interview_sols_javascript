@@ -23,4 +23,7 @@ function getChange(n, denom){
 	for(i;i*denom <= n; i++){
 		ways += getChange(n - i*denom, next_denom);
 	}
+	return ways;
 }
+
+console.log(getChange(100,25));

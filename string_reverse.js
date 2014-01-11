@@ -20,7 +20,6 @@ function reverse1(str){
 	return arr.join('');
 }
 
-
 // sol2
 function reverse2(str){
 	var arr;

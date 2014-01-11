@@ -15,19 +15,16 @@
 
 
 
-function queueOrPop(stack_current,stack_remain,str){
-	if(stack_remain.length === 0 && stack_current.length === 0){
-		return console.log(str);
-	}
-
-	if(stack_current.length){
-		var temp_current = stack_current.slice();
+function queueOrPop(stack_for_pop,stack_for_queue,str){
+	if(stack_for_queue.length === 0 && stack_for_pop.length === 0) return console.log(str);
+	if(stack_for_pop.length){ // if we can pop
+		var temp_current = stack_for_pop.slice();
 		var temp_str = str + temp_current.pop();
-		queueOrPop(temp_current,stack_remain,temp_str);
+		queueOrPop(temp_current,stack_for_queue,temp_str);
 	}
-	if(stack_remain.length){
-		var temp_remain = stack_remain.slice();
-		var temp_current = stack_current.slice();
+	if(stack_for_queue.length){
+		var temp_remain = stack_for_queue.slice();
+		var temp_current = stack_for_pop.slice();
 		temp_current.push(temp_remain.pop());
 		queueOrPop(temp_current,temp_remain,str);
 	}
