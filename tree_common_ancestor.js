@@ -2,8 +2,6 @@
 // have both node going up 1 step at a time
 // if one of them step on a node that is marked as visited then it's a common ancestor of both node
 
-
-
 function findCommonAncestor(node1,node2){
 	var node1_next, node_2_next
 	node1_next = node1 ? node1.parent : null;
