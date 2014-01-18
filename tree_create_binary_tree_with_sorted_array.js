@@ -10,8 +10,8 @@ function getBinaryTree(arr,root){
 	if(!arr.length) return;
 
 	root = new Node(middle);
-	left = arr.splice(0,middle);
-	right = arr.splice(middle,len);
+	left = arr.slice(0,middle);
+	right = arr.slice(middle);
 
 	getBinaryTree(left,root.left);
 	getBinaryTree(right,root.right);

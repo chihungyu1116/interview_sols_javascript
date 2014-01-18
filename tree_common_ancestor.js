@@ -19,5 +19,5 @@ function findCommonAncestor(node1,node2){
 		}
 	}
 
-	findCommonAncestor(node1.parent,node2.parent)
+	return findCommonAncestor(node1.parent,node2.parent)
 }

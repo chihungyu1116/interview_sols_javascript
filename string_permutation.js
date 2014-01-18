@@ -34,3 +34,9 @@ function permu(str){
 }
 // example:
 permu('abcde');
+
+
+
+// a   bcde
+// b   acde
+// c   

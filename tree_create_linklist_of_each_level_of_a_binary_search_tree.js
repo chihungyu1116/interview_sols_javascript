@@ -9,7 +9,6 @@ function findLevelLinkList(root){
 		stack2 = [];
 		while(stack1.length){
 			node = stack1.pop();
-			
 			if(node.left) stack2.push(node.left);
 			if(node.right) stack2.push(node.right);
 			
@@ -17,7 +16,7 @@ function findLevelLinkList(root){
 		stack1 = stack2;
 
 		if(stack1.length === 0){
-			break;
+			return level;
 		} else {
 			level.push(stack1);
 		}
