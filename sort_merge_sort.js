@@ -52,7 +52,6 @@ function merge_sort_helper(arr){
 	var left = merge_sort_helper(arr.slice(0,middle));
 	var right = merge_sort_helper(arr.slice(middle));
 
-
 	return merge(left,right);
 }
 
