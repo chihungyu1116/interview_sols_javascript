@@ -28,27 +28,3 @@ function combination_helper(k, curr, arr){
 
 
 combination_k_n(3,5);
-
-
-
-
-
-
-
-
-
-
-function fibs(n){
-
-	
-
-	var prev2=1, prev1=1, current;
-
-	for(var i = 2; i <= n; i++){
-		current = prev2 + prev1;
-		prev2 = prev1;
-		prev1 = current;
-	}
-	return current;
-}
-fibs(100);

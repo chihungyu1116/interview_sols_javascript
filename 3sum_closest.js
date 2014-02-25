@@ -3,9 +3,6 @@
 // You may assume that each input would have exactly one solution.
 
 
-
-
-
 function three_sum_closest(arr, target){
 	var len = arr.length;
 

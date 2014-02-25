@@ -64,7 +64,6 @@ function max_sum(){
 
 
 function max_sum_helper(triangle){
-
 	var rows = triangle.length,
 			cols,
 			max_sum;
@@ -80,3 +79,11 @@ function max_sum_helper(triangle){
 
 max_sum();
 
+
+
+// recursion
+
+function return_max(node){
+	if(!node) return 0;
+	return node.value + Math.max(return_max(node.left), return_max(node.right)); 
+}

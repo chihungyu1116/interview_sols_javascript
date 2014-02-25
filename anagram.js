@@ -6,8 +6,7 @@ function is_anagram(str1, str2){
     // we can sort then compare
     // or use hash
     
-    if(str1.split('').sort().join() === str2.split('').sort().join()) return true;
-
+  if(str1.split('').sort().join() === str2.split('').sort().join()) return true;
     return false
   } else if(!str1 && !str2) {
     return true;

@@ -25,7 +25,7 @@ var arr = [
 	[1, 1, 1, 1, 1, 1, 1]
 ]
 
-
+// solution 1, use recursion
 function paths(arr){
 	var m = arr.length -1,
 			y = arr[0].length -1;
@@ -36,7 +36,6 @@ function paths(arr){
 		return 0;
 	}
 }
-
 function sols(arr, x, y, m, n){
 	if(x === m && y === n) return 1;
 	if(arr[x] && arr[x][y] === 1){
@@ -45,6 +44,34 @@ function sols(arr, x, y, m, n){
 		return 0;
 	}
 }
-
-
 paths(arr);
+
+// solution 2 is able to handle large input
+// stack friendly version
+function sols2(arr){
+	var h = arr.length,
+			w = arr[0].length,
+			i, j, current, left, top;
+
+	for(i = 0; i < h; i++){
+		for(j = 0; j < w; j++){
+			current = arr[i][j];
+			top = i === 0 ? 0.5 : arr[i - 1][j];
+			left = j === 0 ? 0.5 : arr[i][j-1];
+	
+			if(left === 0 && top === 0){
+				arr[i][j] = 0;
+			} else if(current > 0 && (left > 0 || top > 0)){
+				arr[i][j] = (left + top) | 0;
+			} else {
+				console.log('a6');
+				arr[i][j] = 0;
+			}		
+		}
+	}
+	return arr[h-1][w-1];
+}
+
+sols2(arr)
+
+
