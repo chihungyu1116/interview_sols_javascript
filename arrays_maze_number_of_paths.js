@@ -44,7 +44,11 @@ function sols(arr, x, y, m, n){
 		return 0;
 	}
 }
-paths(arr);
+// uncomment below to run solution 1
+// paths(arr);
+
+
+
 
 // solution 2 is able to handle large input
 // stack friendly version
@@ -64,7 +68,6 @@ function sols2(arr){
 			} else if(current > 0 && (left > 0 || top > 0)){
 				arr[i][j] = (left + top) | 0;
 			} else {
-				console.log('a6');
 				arr[i][j] = 0;
 			}		
 		}
